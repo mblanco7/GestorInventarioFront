@@ -6,7 +6,7 @@
     	<meta name="title" content="Inventario - UDI">
     	<meta name="description" content="Proyecto de inventario para la UDI">
     	<meta name="keyword" content="inventario,udi,universidad">
-    	<title><?php echo "Inventario - UDI"; ?></title>
+    	<title><?php echo 'Inventario - UDI'; ?></title>
     	
     	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"/>
     	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css"/>
@@ -34,8 +34,8 @@
                         		<li><a href="/">INVENTARIO</a></li>
     
                                 <br>
-                    			<a class="url" href="#modalIngreso" data-toggle="modal">Iniciar sesion</a><br><br>
-                        		<a class="url" href="#modalRegistro" data-toggle="modal">Crear cuenta</a><br><br>
+                    			<a class="url" href="#modalIngreso" data-toggle="modal">Iniciar sesión</a><br><br>
+                        		<!-- <a class="url" href="#modalRegistro" data-toggle="modal">Crear cuenta</a><br><br> -->
                         			
                 				<br><br>
                 				<a class="url" style="color: #d9534f; font-weight: 700;" href="">Salir</a>
@@ -53,8 +53,8 @@
         
         		<!--LOG-->
         		<div class="col-lg-3 col-md-5 col-sm-5 col-6 float-right">
-        			<a class="logbtn float-right" href="#modalRegistro" data-toggle="modal" style="font-weight: 500;">Register</a>
-        			<a class="logbtn float-right" href="#modalIngreso" data-toggle="modal" style="margin-right: 15px; font-weight: 500;">Login</a>
+        			<!-- <a class="logbtn float-right" href="#modalRegistro" data-toggle="modal" style="font-weight: 500;">Register</a> -->
+        			<a class="logbtn float-right" href="#modalIngreso" data-toggle="modal" style="margin-right: 15px; font-weight: 500;">Iniciar sesión</a>
         		</div>
         	</div>
         </header>
@@ -93,16 +93,15 @@
         <div class="modal fade modalFormulario" id="modalIngreso" role="dialog">
             <div class="modal-content modal-dialog">
                 <div class="modal-body modalTitulo">
-                	<a class="nav login btnactive" data-target="login" style="margin:0 0 80px 15px">Login</a>
-                    <a href="#modalRegistro" data-dismiss="modal" data-toggle="modal" class="nav register" style="margin:0 0 80px 40px">Register</a>
+                	<a class="nav login btnactive" data-target="login" style="margin:0 0 80px 15px">Iniciar sesión</a>
+                    <!-- <a href="#modalRegistro" data-dismiss="modal" data-toggle="modal" class="nav register" style="margin:0 0 80px 40px">Register</a> -->
         
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
         
         			<!--INGRESO DIRECTO-->
-        			<form>
-        				
+        			<form method="post" action="ControllerLogin.php">
             			<label for="ingEmail" style="margin: 0 0 5px 0; font-size: 10px;">EMAIL</label>
-            			<input type="email" class="form-control input-lg" id="ingEmail" name="ingEmail" required>
+            			<input type="text" class="form-control input-lg" id="ingEmail" name="ingEmail" required>
                             
                         <label for="ingPassword" style="margin: 20px 0 5px 0; font-size: 10px;">CONTRASEÑA</label>
             			<input type="password" class="form-control input-lg" id="ingPassword" name="ingPassword" required>
@@ -112,9 +111,9 @@
         			</form>
                 </div>
                 
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
         			<a href="#modalPassword" data-dismiss="modal" data-toggle="modal">Olvidaste la contraseña?</a>
-                </div>
+                </div> -->
             </div>
         </div>
         
